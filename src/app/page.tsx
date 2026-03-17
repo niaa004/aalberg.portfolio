@@ -96,6 +96,12 @@ export default function Page() {
   const [activeImageIndex, setActiveImageIndex] = React.useState(0);
   const [isImageExpanded, setIsImageExpanded] = React.useState(false);
   const [expandedProjectId, setExpandedProjectId] = React.useState<string | null>(null);
+  const cleanFadeIn = {
+    initial: { opacity: 0 },
+    whileInView: { opacity: 1 },
+    viewport: { once: true, amount: 0.2 },
+    transition: { duration: 0.6, ease: 'easeOut' as const },
+  };
 
   return (
     <main className="min-h-screen bg-white dark:bg-slate-950 text-gray-900 dark:text-white transition-colors">
@@ -194,10 +200,7 @@ export default function Page() {
         <div className="mx-auto max-w-6xl">
           {/* Section Header */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, ease: 'easeOut' }}
+            {...cleanFadeIn}
             className="mb-14 sm:mb-20"
           >
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Featured Projects</span>
@@ -217,10 +220,7 @@ export default function Page() {
               .map((project) => (
                 <motion.div
                   key={project.id}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.45, ease: 'easeOut' }}
+                  {...cleanFadeIn}
                 >
                   {project.images && project.images.length > 0 ? (
                     <div
@@ -307,10 +307,7 @@ export default function Page() {
                 .map((project) => (
                   <motion.div
                     key={project.id}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.45, ease: 'easeOut' }}
+                    {...cleanFadeIn}
                   >
                     <a
                       href={project.link}
@@ -358,10 +355,7 @@ export default function Page() {
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 border-y border-gray-100 dark:border-slate-900 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
         <div className="mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, ease: 'easeOut' }}
+            {...cleanFadeIn}
             className="mb-12 sm:mb-16"
           >
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Technical Expertise</span>
@@ -411,10 +405,7 @@ export default function Page() {
               return (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.45, ease: 'easeOut' }}
+                  {...cleanFadeIn}
                   className="p-6 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-md hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200"
                 >
                   <div className="flex items-center gap-3 mb-4">
@@ -444,10 +435,7 @@ export default function Page() {
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950">
         <div className="mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, ease: 'easeOut' }}
+            {...cleanFadeIn}
             className="mb-12 sm:mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
@@ -480,10 +468,7 @@ export default function Page() {
             ].map((value, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, ease: 'easeOut' }}
+                {...cleanFadeIn}
                 className={`p-8 rounded-xl bg-gradient-to-br ${value.gradient} dark:bg-gradient-to-br border border-gray-200/50 dark:border-slate-700 hover:border-gray-300/80 dark:hover:border-slate-600 hover:shadow-md hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200`}
               >
                 <div className="flex items-start gap-4">
@@ -504,13 +489,14 @@ export default function Page() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ duration: 0.15, ease: 'easeOut' }}
           onClick={() => setExpandedProjectId(null)}
           className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
         >
           <motion.div
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.95, opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
             className="bg-white dark:bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-auto"
           >
@@ -540,13 +526,7 @@ export default function Page() {
                   {projects
                     .find((p) => p.id === expandedProjectId)
                     ?.images?.map((image, idx) => (
-                      <motion.div
-                        key={idx}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: idx * 0.1 }}
-                        className="space-y-3"
-                      >
+                      <div key={idx} className="space-y-3">
                         <div className="relative rounded-lg overflow-hidden bg-gray-100 dark:bg-slate-800 flex items-center justify-center max-w-2xl mx-auto py-8">
                           <img
                             src={image}
@@ -558,7 +538,7 @@ export default function Page() {
                           Screen {idx + 1} of{' '}
                           {projects.find((p) => p.id === expandedProjectId)?.images?.length}
                         </p>
-                      </motion.div>
+                      </div>
                     ))}
                 </div>
               </div>
@@ -571,10 +551,7 @@ export default function Page() {
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 border-y border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-900">
         <div className="mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, ease: 'easeOut' }}
+            {...cleanFadeIn}
             className="mb-12 sm:mb-16"
           >
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Background</span>
@@ -585,10 +562,7 @@ export default function Page() {
             {education.map((item, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, ease: 'easeOut' }}
+                {...cleanFadeIn}
                 className="p-8 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-lg dark:hover:shadow-blue-600/10 transition-all"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -619,10 +593,7 @@ export default function Page() {
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950">
         <div className="mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, ease: 'easeOut' }}
+            {...cleanFadeIn}
             className="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-10 sm:p-14 border border-slate-700/60 text-center text-white"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">Let's Work Together</h2>
