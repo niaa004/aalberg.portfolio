@@ -157,7 +157,7 @@ export default function Page() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="block"
+                className="block mt-6 sm:mt-8 lg:mt-0"
               >
                 <div className="relative w-full aspect-square max-w-[220px] sm:max-w-xs lg:max-w-md mx-auto">
                   {/* Outer shadow layer */}
