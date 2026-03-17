@@ -218,10 +218,7 @@ export default function Page() {
             {projects
               .filter((p) => p.id === 'leanbox')
               .map((project) => (
-                <motion.div
-                  key={project.id}
-                  {...cleanFadeIn}
-                >
+                <div key={project.id}>
                   {project.images && project.images.length > 0 ? (
                     <div
                       onClick={() => setExpandedProjectId(project.id)}
@@ -294,7 +291,7 @@ export default function Page() {
                       </div>
                     </div>
                   ) : null}
-                </motion.div>
+                </div>
               ))}
           </div>
 
@@ -305,10 +302,7 @@ export default function Page() {
               {projects
                 .filter((p) => p.id !== 'leanbox')
                 .map((project) => (
-                  <motion.div
-                    key={project.id}
-                    {...cleanFadeIn}
-                  >
+                  <div key={project.id}>
                     <a
                       href={project.link}
                       target="_blank"
@@ -344,7 +338,7 @@ export default function Page() {
                         View <ExternalLink size={16} />
                       </div>
                     </a>
-                  </motion.div>
+                  </div>
                 ))}
             </div>
           </div>
@@ -354,10 +348,7 @@ export default function Page() {
       {/* SKILLS SECTION */}
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 border-y border-gray-100 dark:border-slate-900 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
         <div className="mx-auto max-w-6xl">
-          <motion.div
-            {...cleanFadeIn}
-            className="mb-12 sm:mb-16"
-          >
+          <motion.div {...cleanFadeIn} className="mb-12 sm:mb-16">
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Technical Expertise</span>
             <h2 className="text-4xl sm:text-5xl font-bold mt-2 mb-6 text-gray-900 dark:text-white">
               Full-Stack Capabilities
@@ -403,9 +394,8 @@ export default function Page() {
             ].map((skillGroup, idx) => {
               const IconComponent = skillGroup.icon;
               return (
-                <motion.div
+                <div
                   key={idx}
-                  {...cleanFadeIn}
                   className="p-6 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-md hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200"
                 >
                   <div className="flex items-center gap-3 mb-4">
@@ -424,7 +414,7 @@ export default function Page() {
                       </span>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -434,10 +424,7 @@ export default function Page() {
       {/* UNIQUE VALUE PROPOSITION SECTION */}
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950">
         <div className="mx-auto max-w-6xl">
-          <motion.div
-            {...cleanFadeIn}
-            className="mb-12 sm:mb-16"
-          >
+          <motion.div {...cleanFadeIn} className="mb-12 sm:mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Why Work With Me
             </h2>
@@ -466,9 +453,8 @@ export default function Page() {
                 gradient: 'from-cyan-50 to-cyan-100 dark:from-cyan-900/20 dark:to-cyan-800/20',
               },
             ].map((value, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                {...cleanFadeIn}
                 className={`p-8 rounded-xl bg-gradient-to-br ${value.gradient} dark:bg-gradient-to-br border border-gray-200/50 dark:border-slate-700 hover:border-gray-300/80 dark:hover:border-slate-600 hover:shadow-md hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200`}
               >
                 <div className="flex items-start gap-4">
@@ -477,7 +463,7 @@ export default function Page() {
                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{value.description}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -550,19 +536,15 @@ export default function Page() {
       {/* EDUCATION SECTION */}
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 border-y border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-900">
         <div className="mx-auto max-w-6xl">
-          <motion.div
-            {...cleanFadeIn}
-            className="mb-12 sm:mb-16"
-          >
+          <motion.div {...cleanFadeIn} className="mb-12 sm:mb-16">
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Background</span>
             <h2 className="text-4xl sm:text-5xl font-bold mt-2 text-gray-900 dark:text-white">Education & Experience</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {education.map((item, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                {...cleanFadeIn}
                 className="p-8 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-lg dark:hover:shadow-blue-600/10 transition-all"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -583,7 +565,7 @@ export default function Page() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -592,10 +574,7 @@ export default function Page() {
       {/* CTA SECTION */}
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950">
         <div className="mx-auto max-w-6xl">
-          <motion.div
-            {...cleanFadeIn}
-            className="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-10 sm:p-14 border border-slate-700/60 text-center text-white"
-          >
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-10 sm:p-14 border border-slate-700/60 text-center text-white">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">Let's Work Together</h2>
             <p className="text-lg text-slate-200 mb-10 max-w-2xl mx-auto">
               Interested in collaborating on health tech, fullstack development, or innovative projects? I'd love to hear from you.
@@ -623,7 +602,7 @@ export default function Page() {
                 <Github size={20} /> GitHub
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
