@@ -157,9 +157,9 @@ export default function Page() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="hidden lg:block"
+                className="block"
               >
-                <div className="relative w-full aspect-square max-w-md mx-auto">
+                <div className="relative w-full aspect-square max-w-[220px] sm:max-w-xs lg:max-w-md mx-auto">
                   {/* Outer shadow layer */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-purple-600/30 dark:from-blue-600/40 dark:to-purple-600/40 rounded-2xl blur-3xl" />
                   {/* Inner gradient overlay */}
