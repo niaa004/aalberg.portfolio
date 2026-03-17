@@ -9,7 +9,7 @@ const projects = [
     id: 'leanbox',
     name: 'LeanBox',
     category: 'Featured Project',
-    description: 'A behavioral and health app using continuous glucose monitoring (CGM) as biofeedback. Helps users reduce weight, improve metabolic health, and build stable habits through the "box" model - staying within eating windows and glucose ranges for metabolic stability.',
+    description: 'A behavioral and health app using continuous glucose monitoring (CGM) as biofeedback. Helps users reduce weight, improve metabolic health, staying within eating windows and glucose ranges for metabolic stability.',
     tech: ['CGM Data', 'Biofeedback', 'Health Tech', 'Behavioral Science'],
     link: 'https://leanbox.no',
     featured: true,
@@ -100,28 +100,28 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-white dark:bg-slate-950 text-gray-900 dark:text-white transition-colors">
       {/* HERO SECTION */}
-      <header className="relative overflow-hidden bg-white dark:bg-slate-950">
+      <header className="relative overflow-hidden bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-900">
         {/* Gradient backdrop */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/20 dark:bg-blue-900/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/20 dark:bg-purple-900/20 rounded-full blur-3xl" />
 
-        <div className="relative px-4 sm:px-6 lg:px-8 pt-16 pb-20 sm:pt-24 sm:pb-32">
+        <div className="relative px-4 sm:px-6 lg:px-8 pt-16 pb-20 sm:pt-24 sm:pb-32 lg:pt-28 lg:pb-36">
           <div className="mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left - Text Content */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <div className="inline-block mb-6">
-                  <span className="px-4 py-2 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300">
+                <div className="inline-block mb-7">
+                  <span className="px-4 py-2 rounded-full text-sm font-medium border border-blue-200/80 dark:border-blue-500/30 bg-white/80 dark:bg-slate-900/80 text-blue-700 dark:text-blue-300 backdrop-blur-sm">
                     Full-Stack Developer & CTO
                   </span>
                 </div>
 
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-gray-900 dark:text-white">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-7 text-gray-900 dark:text-white">
                   Nicolai
                   <br />
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
@@ -129,23 +129,23 @@ export default function Page() {
                   </span>
                 </h1>
 
-                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-xl leading-relaxed">
+                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-7 max-w-2xl leading-relaxed">
                   With a deep commitment to user-centered design and operational excellence, I'm building innovative health technology that genuinely improves lives. I'm currently the <strong>CTO at Leanbox AS</strong>, where I architect fullstack solutions for behavioral health and metabolic wellness through CGM biofeedback systems.
                 </p>
-                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-xl leading-relaxed">
+                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl leading-relaxed">
                   Pursuing my bachelor's in IT (graduating Spring 2026), I combine technical expertise in frontend, mobile, and backend development with a passion for solving real-world problems. To me, coding isn't just about making things work, it's about understanding user needs, thinking strategically, and building solutions that create genuine impact.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <div className="flex flex-col sm:flex-row gap-4 mb-12 sm:mb-14">
                   <a
                     href="#projects"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 text-white transition-all hover:shadow-lg"
+                    className="inline-flex h-12 items-center justify-center gap-2 px-7 rounded-full text-sm sm:text-base font-semibold bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-gray-50 text-white dark:text-slate-900 transition-all duration-200"
                   >
                     View My Work <ArrowRight size={18} />
                   </a>
                   <a
                     href="mailto:nicolaiaalberg@icloud.com"
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium border-2 border-gray-300 dark:border-slate-600 text-gray-900 dark:text-white hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
+                    className="inline-flex h-12 items-center justify-center px-7 rounded-full text-sm sm:text-base font-semibold border border-gray-300 dark:border-slate-700 text-gray-900 dark:text-white hover:border-gray-400 dark:hover:border-slate-600 transition-all duration-200"
                   >
                     Get in Touch
                   </a>
@@ -190,14 +190,14 @@ export default function Page() {
       </header>
 
       {/* PROJECTS SECTION */}
-      <section id="projects" className="relative px-4 sm:px-6 lg:px-8 py-24 sm:py-32 bg-white dark:bg-slate-950">
+      <section id="projects" className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950">
         <div className="mx-auto max-w-6xl">
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-20"
+            className="mb-14 sm:mb-20"
           >
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Featured Projects</span>
             <h2 className="text-4xl sm:text-5xl font-bold mt-2 mb-6 text-gray-900 dark:text-white">
@@ -210,7 +210,7 @@ export default function Page() {
 
           {/* Projects Grid */}
           {/* Featured LeanBox Project */}
-          <div className="mb-16">
+          <div className="mb-12 sm:mb-16">
             {projects
               .filter((p) => p.id === 'leanbox')
               .map((project, idx) => (
@@ -224,10 +224,10 @@ export default function Page() {
                   {project.images && project.images.length > 0 ? (
                     <div
                       onClick={() => setExpandedProjectId(project.id)}
-                      className="group flex flex-col h-full p-6 rounded-xl bg-white dark:bg-slate-900 border-2 border-blue-500/30 dark:border-blue-500/50 hover:border-blue-400 dark:hover:border-blue-400 hover:shadow-lg dark:hover:shadow-blue-600/20 transition-all cursor-pointer relative overflow-hidden"
+                      className="group flex flex-col h-full p-7 rounded-2xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-lg hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200 cursor-pointer relative overflow-hidden"
                     >
                       {/* Image for LeanBox */}
-                      <div className="relative h-96 -mx-6 -mt-6 mb-4 overflow-hidden rounded-t-xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center">
+                      <div className="relative h-96 -mx-7 -mt-7 mb-5 overflow-hidden rounded-t-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center">
                         {project.images && (
                           <>
                             <motion.img
@@ -268,11 +268,11 @@ export default function Page() {
                           </span>
                         </div>
 
-                        <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                           {project.name}
                         </h3>
 
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-5">
                           {project.description}
                         </p>
 
@@ -288,7 +288,7 @@ export default function Page() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group-hover:gap-3 transition-all mt-auto">
+                      <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold transition-all duration-200 mt-auto">
                         View Gallery <ExternalLink size={16} />
                       </div>
                     </div>
@@ -315,18 +315,18 @@ export default function Page() {
                       href={project.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="group flex flex-col h-full p-6 rounded-xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-lg dark:hover:shadow-blue-600/10 transition-all"
+                      className="group flex flex-col h-full p-7 rounded-2xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-lg hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200"
                     >
                       <div>
                         <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                           {project.category}
                         </span>
 
-                        <h3 className="text-lg font-bold mb-2 mt-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-bold mb-2 mt-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                           {project.name}
                         </h3>
 
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-5">
                           {project.description}
                         </p>
 
@@ -342,7 +342,7 @@ export default function Page() {
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group-hover:gap-3 transition-all mt-auto">
+                      <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold transition-all duration-200 mt-auto">
                         View <ExternalLink size={16} />
                       </div>
                     </a>
@@ -354,13 +354,13 @@ export default function Page() {
       </section>
 
       {/* SKILLS SECTION */}
-      <section className="relative px-4 sm:px-6 lg:px-8 py-24 sm:py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
+      <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 border-y border-gray-100 dark:border-slate-900 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
         <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-12 sm:mb-16"
           >
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Technical Expertise</span>
             <h2 className="text-4xl sm:text-5xl font-bold mt-2 mb-6 text-gray-900 dark:text-white">
@@ -413,7 +413,7 @@ export default function Page() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="p-6 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-lg dark:hover:shadow-blue-600/10 transition-all"
+                  className="p-6 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-md hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-3 rounded-lg bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30">
@@ -439,13 +439,13 @@ export default function Page() {
       </section>
 
       {/* UNIQUE VALUE PROPOSITION SECTION */}
-      <section className="relative px-4 sm:px-6 lg:px-8 py-24 sm:py-32 bg-white dark:bg-slate-950">
+      <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950">
         <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-12 sm:mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Why Work With Me
@@ -481,7 +481,7 @@ export default function Page() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className={`p-8 rounded-xl bg-gradient-to-br ${value.gradient} dark:bg-gradient-to-br border border-gray-200/50 dark:border-slate-700 hover:shadow-lg transition-all`}
+                className={`p-8 rounded-xl bg-gradient-to-br ${value.gradient} dark:bg-gradient-to-br border border-gray-200/50 dark:border-slate-700 hover:border-gray-300/80 dark:hover:border-slate-600 hover:shadow-md hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200`}
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-1">
@@ -565,13 +565,13 @@ export default function Page() {
       )}
 
       {/* EDUCATION SECTION */}
-      <section className="relative px-4 sm:px-6 lg:px-8 py-24 sm:py-32 bg-gray-50 dark:bg-slate-900">
+      <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 border-y border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-900">
         <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-12 sm:mb-16"
           >
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Background</span>
             <h2 className="text-4xl sm:text-5xl font-bold mt-2 text-gray-900 dark:text-white">Education & Experience</h2>
@@ -612,29 +612,29 @@ export default function Page() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="relative px-4 sm:px-6 lg:px-8 py-24 sm:py-32 bg-white dark:bg-slate-950">
+      <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950">
         <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-blue-600 to-purple-600 dark:from-blue-600 dark:to-purple-700 rounded-2xl p-12 sm:p-16 text-center text-white"
+            className="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-10 sm:p-14 border border-slate-700/60 text-center text-white"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">Let's Work Together</h2>
-            <p className="text-lg text-blue-50 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-200 mb-10 max-w-2xl mx-auto">
               Interested in collaborating on health tech, fullstack development, or innovative projects? I'd love to hear from you.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:cto@leanbox.no"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold bg-white text-blue-600 hover:bg-blue-50 transition-all"
+                className="inline-flex h-12 items-center justify-center gap-2 px-7 rounded-full text-sm sm:text-base font-semibold bg-white text-slate-900 hover:bg-slate-50 transition-all duration-200"
               >
                 <Mail size={20} /> cto@leanbox.no
               </a>
               <a
                 href="mailto:nicolaiaalberg@icloud.com"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold border-2 border-white text-white hover:bg-white/10 transition-all"
+                className="inline-flex h-12 items-center justify-center gap-2 px-7 rounded-full text-sm sm:text-base font-semibold border border-slate-300/70 text-white hover:bg-white/5 transition-all duration-200"
               >
                 <Mail size={20} /> nicolaiaalberg@icloud.com
               </a>
@@ -642,7 +642,7 @@ export default function Page() {
                 href="https://github.com/niaa004"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold border-2 border-white text-white hover:bg-white/10 transition-all"
+                className="inline-flex h-12 items-center justify-center gap-2 px-7 rounded-full text-sm sm:text-base font-semibold border border-slate-300/70 text-white hover:bg-white/5 transition-all duration-200"
               >
                 <Github size={20} /> GitHub
               </a>
