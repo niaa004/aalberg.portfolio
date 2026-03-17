@@ -194,9 +194,10 @@ export default function Page() {
         <div className="mx-auto max-w-6xl">
           {/* Section Header */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
             className="mb-14 sm:mb-20"
           >
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Featured Projects</span>
@@ -213,13 +214,13 @@ export default function Page() {
           <div className="mb-12 sm:mb-16">
             {projects
               .filter((p) => p.id === 'leanbox')
-              .map((project, idx) => (
+              .map((project) => (
                 <motion.div
                   key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
+                  transition={{ duration: 0.45, ease: 'easeOut' }}
                 >
                   {project.images && project.images.length > 0 ? (
                     <div
@@ -303,13 +304,13 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {projects
                 .filter((p) => p.id !== 'leanbox')
-                .map((project, idx) => (
+                .map((project) => (
                   <motion.div
                     key={project.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
+                    transition={{ duration: 0.45, ease: 'easeOut' }}
                   >
                     <a
                       href={project.link}
@@ -357,9 +358,10 @@ export default function Page() {
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 border-y border-gray-100 dark:border-slate-900 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
         <div className="mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
             className="mb-12 sm:mb-16"
           >
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Technical Expertise</span>
@@ -409,10 +411,10 @@ export default function Page() {
               return (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
+                  transition={{ duration: 0.45, ease: 'easeOut' }}
                   className="p-6 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-md hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200"
                 >
                   <div className="flex items-center gap-3 mb-4">
@@ -442,9 +444,10 @@ export default function Page() {
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950">
         <div className="mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
             className="mb-12 sm:mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
@@ -477,10 +480,10 @@ export default function Page() {
             ].map((value, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
+                transition={{ duration: 0.45, ease: 'easeOut' }}
                 className={`p-8 rounded-xl bg-gradient-to-br ${value.gradient} dark:bg-gradient-to-br border border-gray-200/50 dark:border-slate-700 hover:border-gray-300/80 dark:hover:border-slate-600 hover:shadow-md hover:shadow-slate-900/5 dark:hover:shadow-black/10 transition-all duration-200`}
               >
                 <div className="flex items-start gap-4">
@@ -568,9 +571,10 @@ export default function Page() {
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 border-y border-gray-100 dark:border-slate-800 bg-gray-50 dark:bg-slate-900">
         <div className="mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
             className="mb-12 sm:mb-16"
           >
             <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Background</span>
@@ -581,10 +585,10 @@ export default function Page() {
             {education.map((item, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
+                transition={{ duration: 0.45, ease: 'easeOut' }}
                 className="p-8 rounded-xl bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-lg dark:hover:shadow-blue-600/10 transition-all"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -615,9 +619,10 @@ export default function Page() {
       <section className="relative px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 bg-white dark:bg-slate-950">
         <div className="mx-auto max-w-6xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
             className="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-800 dark:to-slate-900 rounded-3xl p-10 sm:p-14 border border-slate-700/60 text-center text-white"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-6">Let's Work Together</h2>
