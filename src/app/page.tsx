@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ExternalLink, ArrowRight, ChevronDown, Code2, Smartphone, Server, Database, Cloud, Users } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, ArrowRight, ChevronDown, Code2, Smartphone, Server, Database, Cloud, Users, Bot } from 'lucide-react';
 
 const projects = [
   {
@@ -77,7 +77,7 @@ const education = [
     institution: 'Kristiania University of Applied Sciences',
     status: 'Graduating Spring 2026',
     details: [
-      'CTO at Leanbox AS (Sep 2025 - Present)',
+      'CTO at Leanbox (Sep 2025 - Present)',
       'Student Assistant (Aug 2025 - Present)',
     ],
   },
@@ -123,7 +123,7 @@ export default function Page() {
               >
                 <div className="inline-block mb-7">
                   <span className="px-4 py-2 rounded-full text-sm font-medium border border-blue-200/80 dark:border-blue-500/30 bg-white/80 dark:bg-slate-900/80 text-blue-700 dark:text-blue-300 backdrop-blur-sm">
-                    Full-Stack Developer & CTO
+                    Fullstack Developer
                   </span>
                 </div>
 
@@ -136,7 +136,7 @@ export default function Page() {
                 </h1>
 
                 <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-7 max-w-2xl leading-relaxed">
-                  With a deep commitment to user-centered design and operational excellence, I'm building innovative health technology that genuinely improves lives. I'm currently the <strong>CTO at Leanbox AS</strong>, where I architect fullstack solutions for behavioral health and metabolic wellness through CGM biofeedback systems.
+                  With a deep commitment to user-centered design and operational excellence, I'm building innovative health technology that genuinely improves lives. I'm currently the <strong>CTO at Leanbox</strong>, where I architect fullstack solutions for behavioral health and metabolic wellness through CGM biofeedback systems.
                 </p>
                 <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl leading-relaxed">
                   Pursuing my bachelor's in IT (graduating Spring 2026), I combine technical expertise in frontend, mobile, and backend development with a passion for solving real-world problems. To me, coding isn't just about making things work, it's about understanding user needs, thinking strategically, and building solutions that create genuine impact.
@@ -385,6 +385,11 @@ export default function Page() {
                 title: 'DevOps & Cloud',
                 skills: ['Docker', 'CI/CD (GitHub Actions)', 'Azure', 'Git/GitHub', 'Infrastructure as Code'],
                 icon: Cloud,
+              },
+              {
+                title: 'AI & Automation',
+                skills: ['n8n Pipelines', 'OpenAI/Anthropic API', 'Prompt Engineering', 'LLM Integration', 'Workflow Automation'],
+                icon: Bot,
               },
               {
                 title: 'Leadership & Process',
@@ -647,7 +652,7 @@ export default function Page() {
           </div>
 
           <div className="border-t border-gray-300 dark:border-slate-700 pt-8 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-gray-600 dark:text-gray-400 text-sm">© 2025 Nicolai Aalberg. All rights reserved.</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">© 2026 Nicolai Aalberg. All rights reserved.</p>
             <p className="text-gray-500 dark:text-gray-500 text-sm mt-4 sm:mt-0">Designed & built with React, Next.js & Tailwind CSS</p>
           </div>
         </div>
