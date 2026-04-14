@@ -77,7 +77,7 @@ const education = [
     institution: 'Kristiania University of Applied Sciences',
     status: 'Graduating Spring 2026',
     details: [
-      'CTO at Leanbox (Sep 2025 - Present)',
+      'CTO at Leanbox (Sep 2025 - March 2026)',
       'Student Assistant (Aug 2025 - Present)',
     ],
   },
@@ -136,7 +136,7 @@ export default function Page() {
                 </h1>
 
                 <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-7 max-w-2xl leading-relaxed">
-                  With a deep commitment to user-centered design and operational excellence, I'm building innovative health technology that genuinely improves lives. I'm currently the <strong>CTO at Leanbox</strong>, where I architect fullstack solutions for behavioral health and metabolic wellness through CGM biofeedback systems.
+                  With a deep commitment to user-centered design and operational excellence, I'm building innovative health technology that genuinely improves lives.
                 </p>
                 <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl leading-relaxed">
                   Pursuing my bachelor's in IT (graduating Spring 2026), I combine technical expertise in frontend, mobile, and backend development with a passion for solving real-world problems. To me, coding isn't just about making things work, it's about understanding user needs, thinking strategically, and building solutions that create genuine impact.
@@ -587,12 +587,6 @@ export default function Page() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:cto@leanbox.no"
-                className="inline-flex h-12 items-center justify-center gap-2 px-7 rounded-full text-sm sm:text-base font-semibold bg-white text-slate-900 hover:bg-slate-50 transition-all duration-200"
-              >
-                <Mail size={20} /> cto@leanbox.no
-              </a>
-              <a
                 href="mailto:nicolaiaalberg@icloud.com"
                 className="inline-flex h-12 items-center justify-center gap-2 px-7 rounded-full text-sm sm:text-base font-semibold border border-slate-300/70 text-white hover:bg-white/5 transition-all duration-200"
               >
@@ -617,7 +611,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="font-bold text-gray-900 dark:text-white mb-4">Nicolai Aalberg</h3>
-              <p className="text-gray-600 dark:text-gray-400">Full-stack developer & CTO building innovative health tech solutions.</p>
+              <p className="text-gray-600 dark:text-gray-400">Full-stack developer.</p>
             </div>
             <div>
               <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Links</h4>
@@ -637,11 +631,6 @@ export default function Page() {
             <div>
               <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Contact</h4>
               <ul className="space-y-2">
-                <li>
-                  <a href="mailto:cto@leanbox.no" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition">
-                    cto@leanbox.no
-                  </a>
-                </li>
                 <li>
                   <a href="mailto:nicolaiaalberg@icloud.com" className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition">
                     nicolaiaalberg@icloud.com
